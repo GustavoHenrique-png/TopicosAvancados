@@ -1,7 +1,5 @@
 # (X**2)-(2x-3)
 
-
-
 def Raizes():
     delta = int(input('Digite o valor de X'))
     delta = (-2**2) -(4*1*3)
