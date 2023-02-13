@@ -11,17 +11,24 @@ def trueRoots():
     X1 =  (-2 + Delta **(1/2)) /2*1
     X2 =  (-2 - Delta **(1/2)) /2*1
 
-    return X1,X2
+    ValoresDeX1 = []
+    ValoresDex2 = []
 
-def generateGraphs(X1,X2):
-    XBar = [1,2,3,4,5,6,7,8,9,10]
-    YBar = [1,2,3,4,5,6,7,8,9,10]
+    for i in range(-10,10,1):
+        ValoresDeX1.append(X1)
+        ValoresDex2.append(X2)
 
-    plt.plot(X1,X2)
-    return plt.show()
+    return ValoresDeX1,ValoresDex2
 
+def generateGraphs(EixoX,EixoY):
+    fig,ax = plt.subplots()
+    ax.plot([EixoX,EixoY])
+    plt.xlim(-1,10)
+    plt.ylim(-1,10)
+    showgraph = plt.show()
+    return showgraph
 
 
 if __name__ == '__main__':
     print(trueRoots())
-    generateGraphs(trueRoots())
+    generateGraphs(trueRoots.ValoresDeX1,trueRoots.ValoresDex2)
