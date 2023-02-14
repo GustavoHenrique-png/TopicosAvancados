@@ -14,15 +14,19 @@ def trueRoots():
     ValoresDeX1 = []
     ValoresDex2 = []
 
-    for i in range(-10,10,1):
-        ValoresDeX1.append(X1)
-        ValoresDex2.append(X2)
+    for x in range(-10,10,1):
+        ValoresDeX1.append(x)
+        ValoresDex2.append((x**2)+(2*x) - 3)
 
     return ValoresDeX1,ValoresDex2
 
-def generateGraphs(EixoX,EixoY):
+def generateGraphs():
+
+    EixoX = list(ValoresDeX1)
+    EixoY = list(ValoresDeX2)
+
     fig,ax = plt.subplots()
-    ax.plot([EixoX,EixoY])
+    ax.plot(EixoX,EixoY)
     plt.xlim(-1,10)
     plt.ylim(-1,10)
     showgraph = plt.show()
@@ -31,4 +35,4 @@ def generateGraphs(EixoX,EixoY):
 
 if __name__ == '__main__':
     print(trueRoots())
-    generateGraphs(trueRoots.ValoresDeX1,trueRoots.ValoresDex2)
+    generateGraphs()
