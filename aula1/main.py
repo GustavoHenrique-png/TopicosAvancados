@@ -11,28 +11,23 @@ def trueRoots():
     X1 =  (-2 + Delta **(1/2)) /2*1
     X2 =  (-2 - Delta **(1/2)) /2*1
 
-    ValoresDeX1 = []
-    ValoresDex2 = []
+    #Criando listas vazias para alimentar o gráfico
+    AxleX = []
+    AxleY = []
 
+    #populando as lista com os resultados de y em função de x e de 1 em 1 até 10
     for x in range(-10,10,1):
-        ValoresDeX1.append(x)
-        ValoresDex2.append((x**2)+(2*x) - 3)
+        AxleX.append(x)
+        AxleY.append((x**2)+(2*x) - 3)
 
-    return ValoresDeX1,ValoresDex2
-
-def generateGraphs():
-
-    EixoX = list(ValoresDeX1)
-    EixoY = list(ValoresDeX2)
-
+    #Construindo o gráfico com as informações
     fig,ax = plt.subplots()
-    ax.plot(EixoX,EixoY)
+    ax.plot(AxleX, AxleY)
     plt.xlim(-1,10)
     plt.ylim(-1,10)
     showgraph = plt.show()
     return showgraph
 
-
 if __name__ == '__main__':
-    print(trueRoots())
-    generateGraphs()
+    trueRoots()
+   
