@@ -1,7 +1,7 @@
 
 //a+b = 100/2 -> 50
 
-//area = (-b**2)+50*l
+area = -2*(100*width)*(width**2)
+area = -2*((width-100)**2) - (100**2)
 
-BVertice = -b/(2*a)
-Avertice = (b**2-(4*a*50))
+width-100 = 0
